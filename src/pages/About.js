@@ -8,7 +8,12 @@ const coreValues = [
 ];
 
 const locations = [
-  'Eluru', 'Bhimavaram', 'Palakollu', 'Narasapuram', 'Machilipatnam', 'Visannapeta'
+  { name: 'Eluru', address: 'RR peta, Eluru district, Andhra Pradesh' },
+  { name: 'Bhimavaram', address: 'Beside Annapurna theatre, West godavari, Andhra Pradesh' },
+  { name: 'Palakollu', address: 'main road, west Godavari, Andhra Pradesh' },
+  { name: 'Narasapuram', address: 'Steamer road, West godavari, Andhra Pradesh' },
+  { name: 'Machilipatnam', address: 'Raja gari centre, krishna district, Andhra Pradesh' },
+  { name: 'Visannapeta', address: 'Near bustand, krishna district, Andhra Pradesh' },
 ];
 
 const About = () => {
@@ -85,7 +90,8 @@ const About = () => {
             {locations.map((loc, i) => (
               <div key={i} className="glass-card location-card animate-fade-in">
                 <span className="location-pin">📍</span>
-                <span className="location-name">{loc}</span>
+                <span className="location-name">{loc.name}</span>
+                <span className="location-address">{loc.address}</span>
               </div>
             ))}
           </div>
@@ -99,12 +105,12 @@ const About = () => {
           <p className="section-subtitle animate-fade-in">Working with top smartphone manufacturers</p>
           <div className="brands-grid">
             {[
-              { name: 'Vivo', img: '/vivo.jpeg' },
+              { name: 'Vivo', img: '/vivo.png' },
               { name: 'OPPO', img: '/oppo.jpeg' },
               { name: 'Realme', img: '/realme.jpeg' },
-              { name: 'Xiaomi', img: '/MI.jpeg' },
+              { name: 'Xiaomi', img: '/MI.png' },
               { name: 'iQOO', img: '/IQOO.jpeg' },
-              { name: 'Motorola', img: '/motorola.jpeg' },
+              { name: 'Motorola', img: '/motorola.png' },
             ].map((brand, i) => (
               <div key={i} className="glass-card brand-card animate-fade-in">
                 <img src={brand.img} alt={brand.name} className="brand-logo" />
