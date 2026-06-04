@@ -1,0 +1,262 @@
+.contact-page {
+  overflow-x: hidden;
+}
+
+/* ====== HERO ====== */
+.contact-hero {
+  padding: 80px 0 60px;
+  position: relative;
+}
+
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(184, 134, 11, 0.06) 0%, transparent 70%);
+  z-index: -1;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: rgba(184, 134, 11, 0.08);
+  border: 1px solid rgba(184, 134, 11, 0.2);
+  color: var(--accent);
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.contact-title {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-desc {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ====== CONTACT CARDS ====== */
+.contact-info-section {
+  padding: 40px 0 80px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.contact-card {
+  padding: 40px 28px;
+  text-align: center;
+}
+
+.contact-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(184, 134, 11, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--accent);
+}
+
+.contact-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.contact-value {
+  color: var(--text-primary);
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 8px;
+  word-break: break-all;
+}
+
+a.contact-value:hover {
+  color: var(--accent);
+}
+
+.contact-note {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* ====== SOCIAL ====== */
+.social-section {
+  padding: 80px 0;
+  background: var(--bg-secondary);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.social-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 700px;
+  margin: 40px auto 0;
+}
+
+.social-card {
+  padding: 36px 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-primary);
+  cursor: pointer;
+  background: var(--bg-primary);
+}
+
+.social-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.social-card h3 {
+  font-size: 1.3rem;
+}
+
+.social-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* ====== STORE LOCATION ====== */
+.store-location-section {
+  padding: 80px 0;
+}
+
+.location-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.location-image-card {
+  padding: 6px;
+  overflow: hidden;
+}
+
+.location-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.location-image-card:hover img {
+  transform: scale(1.03);
+}
+
+.location-details-card {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.location-details-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+
+.location-info-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.location-info-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--text-secondary);
+}
+
+.location-info-list a {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.location-info-list a:hover {
+  color: var(--accent);
+}
+
+.loc-icon {
+  flex-shrink: 0;
+  color: var(--accent);
+  margin-top: 3px;
+}
+
+.serving-areas h4 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.area-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.area-tag {
+  background: rgba(184, 134, 11, 0.08);
+  border: 1px solid rgba(184, 134, 11, 0.2);
+  color: var(--accent);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 992px) {
+  .contact-title {
+    font-size: 2.2rem;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .location-visual {
+    grid-template-columns: 1fr;
+  }
+  .social-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-title {
+    font-size: 1.8rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
