@@ -218,9 +218,57 @@ a.contact-value:hover {
 
 .serving-areas h4 {
   font-size: 1.1rem;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
+/* Branch list */
+.branch-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.branch-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(184, 134, 11, 0.05);
+  border: 1px solid rgba(184, 134, 11, 0.12);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.branch-item:hover {
+  background: rgba(184, 134, 11, 0.1);
+  border-color: rgba(184, 134, 11, 0.3);
+}
+
+.branch-pin {
+  flex-shrink: 0;
+  color: var(--accent);
+  margin-top: 3px;
+}
+
+.branch-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.branch-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.branch-addr {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Legacy area tags (kept for compatibility) */
 .area-tags {
   display: flex;
   flex-wrap: wrap;

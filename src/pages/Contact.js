@@ -2,6 +2,15 @@ import React from 'react';
 import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import './Contact.css';
 
+const branches = [
+  { name: 'Eluru', address: 'RR peta, Eluru district, Andhra Pradesh' },
+  { name: 'Bhimavaram', address: 'Beside Annapurna theatre, West Godavari, Andhra Pradesh' },
+  { name: 'Palakollu', address: 'Main road, West Godavari, Andhra Pradesh' },
+  { name: 'Narasapuram', address: 'Steamer road, West Godavari, Andhra Pradesh' },
+  { name: 'Machilipatnam', address: 'Raja gari centre, Krishna district, Andhra Pradesh' },
+  { name: 'Visannapeta', address: 'Near bustand, Krishna district, Andhra Pradesh' },
+];
+
 const Contact = () => {
   return (
     <div className="contact-page">
@@ -98,10 +107,16 @@ const Contact = () => {
                 </li>
               </ul>
               <div className="serving-areas">
-                <h4>Serving Areas</h4>
-                <div className="area-tags">
-                  {['Eluru', 'Bhimavaram', 'Palakollu', 'Narasapuram', 'Machilipatnam', 'Visannapeta'].map((area) => (
-                    <span key={area} className="area-tag">{area}</span>
+                <h4>Our Branch Locations</h4>
+                <div className="branch-list">
+                  {branches.map((branch, i) => (
+                    <div key={i} className="branch-item">
+                      <MapPin size={15} className="branch-pin" />
+                      <div>
+                        <span className="branch-name">{branch.name}</span>
+                        <span className="branch-addr">{branch.address}</span>
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>
